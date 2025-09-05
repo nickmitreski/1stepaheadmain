@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 151 65% 64%;
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 151 65% 64%;
+    --accent-foreground: 240 10% 3.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 151 65% 64%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 151 65% 64%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 151 65% 64%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 151 65% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 { @apply text-4xl md:text-6xl font-bold text-black; }
+  h2 { @apply text-3xl md:text-4xl font-bold text-black; }
+  h3 { @apply text-xl font-semibold text-black; }
+}
+
+@layer utilities {
+  .bg-section-about {
+    background-color: #69dfa6;
+  }
+  .bg-section-values {
+    background-color: #69dfa6;
+  }
+  .bg-offwhite {
+    background-color: #EDEDED;
+  }
+}
+
+@layer components {
+  .card-base {
+    @apply rounded-2xl p-8 shadow transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg hover:ring-2 hover:ring-primary/40 hover:shadow-primary/20 flex items-center justify-center text-center;
+  }
+  .card-white {
+    @apply bg-white border ring-1 ring-black/5 text-black;
+  }
+  .card-green {
+    @apply border-[#69dfa6] bg-[#69dfa6] text-white;
+  }
+  .card-minh-row {
+    @apply min-h-[10rem] sm:min-h-[12rem] md:min-h-[14rem] lg:min-h-[16rem];
+  }
+  .card-minh-short {
+    @apply min-h-[5rem] sm:min-h-[6rem] md:min-h-[7rem];
+  }
+  .card-minh-medium {
+    @apply min-h-[7rem] sm:min-h-[8rem] md:min-h-[9rem];
+  }
+}
